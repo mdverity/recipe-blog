@@ -60,7 +60,7 @@ const Nav = styled.nav`
 `
 
 const NavLink = styled(Link)`
-  color: #fff;
+  color: #fefae6;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -82,7 +82,7 @@ const LogoLink = styled(NavLink)`
 
 const Bars = styled(FaBars)`
   display: none;
-  color: #fff;
+  color: #fefae6;
 
   @media screen and (max-width: 768px) {
     display: block;
