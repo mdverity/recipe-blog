@@ -37,7 +37,6 @@ const Footer = () => {
             <NavLink to="/">Stuff</NavLink>
             <NavLink to="/">Junk</NavLink>
             <NavLink to="/">Things</NavLink>
-            <NavLink to="/">Yeet</NavLink>
           </LinkItems>
         </LinkWrapper>
         <LinkWrapper>

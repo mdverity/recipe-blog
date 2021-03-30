@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 import { Button } from "./Button"
-import EmailBackground from "../assets/videos/board-herbs.jpg"
+import EmailBackground from "../assets/images/board-herbs.jpg"
 
 const EmailForm = () => {
   return (
     <>
       <EmailContainer>
         <EmailContent>
-          <h1>Don't miss out on any posts!</h1>
+          <h1>Don't miss out on anything!</h1>
           <p>Subscribe to our newsletter for regular updates.</p>
           <form action="#">
             <FormWrap>

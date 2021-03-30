@@ -4,6 +4,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
 
 export const query = graphql`
   query($slug: String!) {
@@ -39,8 +40,11 @@ const Recipe = props => {
       [BLOCKS.HEADING_4]: (node, children) => <h4>{children}</h4>,
       [BLOCKS.HEADING_5]: (node, children) => <h5>{children}</h5>,
       [BLOCKS.HEADING_6]: (node, children) => <h6>{children}</h6>,
-      [BLOCKS.UL_LIST]: (node, children) => <ul></ul>,
-      [BLOCKS.OL_LIST]: (node, children) => <ol></ol>,
+      [BLOCKS.HR]: (node, children) => <hr />,
+      [BLOCKS.QUOTE]: (node, children) => <blockquote>{children}</blockquote>,
+      [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
+      [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
+      [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
       [BLOCKS.EMBEDDED_ASSET]: node => {
         const img = props.data.contentfulRecipe.directions.references.find(
           i => {
@@ -67,20 +71,43 @@ const Recipe = props => {
   return (
     <Layout>
       <SEO title={props.data.contentfulRecipe.title} />
-      <div className="post-header">
-        <h1 className="post-title">{props.data.contentfulRecipe.title}</h1>
-        <h4 className="post-date">
-          {props.data.contentfulRecipe.datePublished}
-        </h4>
-      </div>
-      <div className="post-body">
-        {documentToReactComponents(
-          JSON.parse(props.data.contentfulRecipe.directions.raw),
-          options
-        )}
-      </div>
+      <Wrapper>
+        <div className="post-header">
+          <Title>{props.data.contentfulRecipe.title}</Title>
+          <h4 className="post-date">
+            {props.data.contentfulRecipe.datePublished}
+          </h4>
+        </div>
+        <PostBody>
+          {documentToReactComponents(
+            JSON.parse(props.data.contentfulRecipe.directions.raw),
+            options
+          )}
+        </PostBody>
+      </Wrapper>
     </Layout>
   )
 }
 
 export default Recipe
+
+const Wrapper = styled.div`
+  max-width: 1200px;
+  width: 100%;
+  margin: 5rem auto;
+  /* align-items: center; */
+`
+
+const Title = styled.h1`
+  font-size: 3rem;
+`
+
+const PostBody = styled.div`
+  display: grid;
+
+  img {
+    place-self: center;
+    width: 400px;
+    max-height: 100%;
+  }
+`
