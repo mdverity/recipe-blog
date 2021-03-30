@@ -1,8 +1,8 @@
 {
-  "name": "Food Blog",
+  "name": "food-blog",
   "private": true,
   "description": "A simple food blog put together with React and Gatsby",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "Matthew Verity <mdverity@gmail.com>",
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.26",
@@ -35,7 +35,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
+    "build": "env-cmd -f .env gatsby build",
     "develop": "env-cmd -f .env gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
