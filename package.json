@@ -2,7 +2,7 @@
   "name": "food-blog",
   "private": true,
   "description": "A simple food blog put together with React and Gatsby",
-  "version": "01.0",
+  "version": "0.1.0",
   "author": "Matthew Verity <mdverity@gmail.com>",
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.26",
