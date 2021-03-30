@@ -35,7 +35,7 @@ const HeroContainer = styled.div`
   height: 100vh;
   padding: 0 1rem;
   position: relative;
-  margin-top: -80px;
+  margin-top: -120px;
   color: #fefae6;
 
   :before {
@@ -46,12 +46,12 @@ const HeroContainer = styled.div`
     left: 0;
     right: 0;
     z-index: 2;
-    background: linear-gradient(
+    /* background: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0.2) 0%,
         rgba(0, 0, 0, 0.6) 100%
       ),
-      linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%); */
   }
 `
 
@@ -103,6 +103,7 @@ const HeroH1 = styled.h1`
   /* font-weight: bold; */
   padding: 0 1rem;
   margin-left: 0.5rem;
+  text-shadow: 0 2px 6px #121111;
 `
 
 const HeroButton = styled(Button)`

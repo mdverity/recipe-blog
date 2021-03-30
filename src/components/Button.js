@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const Button = styled(Link)`
-  background: ${({ primary }) => (primary ? "#9d4117" : "#FE8E3C")};
+  background: ${({ primary }) => (primary ? "#B26231" : "#FE8E3C")};
   padding: ${({ big }) => (big ? "1rem 3rem" : ".5rem 1.5rem")};
   border-radius: ${({ round }) => (round ? "20px" : "none")};
   font-size: ${({ big }) => (big ? "24px" : "16px")};

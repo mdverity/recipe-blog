@@ -1,17 +1,17 @@
 import React from "react"
 import EmailForm from "../components/EmailForm"
 import Hero from "../components/Hero"
-import Layout from "../components/layout"
-import RecipeShowcase from "../components/RecipeShowcase"
+import PageLayout from "../components/layout"
+import RecipeShowcaseThree from "../components/RecipeShowcaseThree"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Layout>
+  <PageLayout>
     <Hero />
     <SEO title="Home" />
-    <RecipeShowcase />
+    <RecipeShowcaseThree />
     <EmailForm />
-  </Layout>
+  </PageLayout>
 )
 
 export default IndexPage

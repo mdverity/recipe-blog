@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Food Blog`,
     description: `Food and recipe blog highlighting some of the best cuisine around the globe, and how to make it.`,
-    author: `@gatsbyjs`,
+    author: `Matt Verity`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

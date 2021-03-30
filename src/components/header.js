@@ -7,12 +7,12 @@ import { Button } from "./Button"
 const Header = () => {
   const menuData = [
     {
-      title: "About",
-      path: "/about",
+      title: "Home",
+      path: "/",
     },
     {
-      title: "Blog",
-      path: "/blog",
+      title: "About",
+      path: "/about",
     },
     {
       title: "Recipes",
@@ -32,7 +32,7 @@ const Header = () => {
         ))}
       </NavMenu>
       <NavBtn>
-        <Button primary="true" round="true" to="/recipes">
+        <Button primary="true" round="true" to="/">
           Contact Us
         </Button>
       </NavBtn>
@@ -44,7 +44,7 @@ export default Header
 
 const Nav = styled.nav`
   background: transparent;
-  height: 80px;
+  height: 120px;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1300px) / 2);
@@ -60,15 +60,16 @@ const Nav = styled.nav`
 `
 
 const NavLink = styled(Link)`
-  color: #fff;
+  color: #fefae6;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
+  /* margin-bottom: 0.75rem; */
   height: 100%;
   cursor: pointer;
   transition: 0.1s ease-out;
-  font-size: 1.25rem;
+  font-size: 24px;
 
   &:hover {
     transform: scale(1.2);
@@ -82,7 +83,7 @@ const LogoLink = styled(NavLink)`
 
 const Bars = styled(FaBars)`
   display: none;
-  color: #fff;
+  color: #fefae6;
 
   @media screen and (max-width: 768px) {
     display: block;
