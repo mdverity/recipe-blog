@@ -6,26 +6,8 @@ import EmailBackground from "../assets/images/board-herbs.jpg"
 const EmailForm = () => {
   const [email, setEmail] = useState("")
 
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&")
-  }
-
   const handleChange = e => {
-    setValue(e.target.value)
-  }
-
-  handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", email }),
-    })
-      .then(() => alert("Thank you! We've added you to our newsletter."))
-      .catch(error => alert(error))
-
-    e.preventDefault()
+    setEmail(e.target.value)
   }
 
   return (
@@ -35,15 +17,22 @@ const EmailForm = () => {
           <h1>Don't miss out on anything!</h1>
           <p>Subscribe to our newsletter for regular updates.</p>
           <form action="#">
-            <FormWrap onSubmit={handleSubmit}>
-              <label htmlFor="email">
-                <input
-                  type="email"
-                  value={email}
-                  requiredplaceholder="Enter Your Email"
-                  id="email"
-                />
-              </label>
+            <FormWrap
+              name="contact"
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                value={email}
+                onChange={handleChange}
+                required
+                placeholder="Enter Your Email"
+              />
               <Button
                 as="button"
                 type="submit"
