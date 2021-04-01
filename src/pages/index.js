@@ -1,5 +1,4 @@
 import React from "react"
-import EmailForm from "../components/EmailForm"
 import Hero from "../components/Hero"
 import PageLayout from "../components/layout"
 import RecipeShowcaseThree from "../components/RecipeShowcaseThree"
@@ -10,7 +9,6 @@ const IndexPage = () => (
     <Hero />
     <SEO title="Home" />
     <RecipeShowcaseThree />
-    <EmailForm />
   </PageLayout>
 )
 

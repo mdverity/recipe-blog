@@ -136,7 +136,7 @@ const RecipeShowcase = () => {
 
   return (
     <div>
-      <RecipesContainer>
+      <RecipesContainer id="recipes">
         <RecipesHeading>Latest Posts</RecipesHeading>
         <Divider></Divider>
         <RecipeWrapper>{getNewRecipes(imageList)}</RecipeWrapper>
@@ -159,7 +159,6 @@ export const RecipesContainer = styled.div`
     ),
     url(${boardImage}) repeat bottom;
   border-top: 5px solid #151515;
-  border-bottom: 5px solid #151515;
   color: #fefae6;
 
   @media screen and (max-width: 900px) {

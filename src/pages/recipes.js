@@ -105,6 +105,7 @@ export default RecipePage
 const RecipesContainer = styled.div`
   min-height: 100vh;
   padding: 5rem calc((100vw - 1500px) / 2);
+  padding-top: 10rem;
   background: linear-gradient(
       180deg,
       rgba(250, 254, 230, 1) 0%,
@@ -116,6 +117,7 @@ const RecipesContainer = styled.div`
   border-top: 5px solid #151515;
   border-bottom: 5px solid #151515;
   color: #fefae6;
+  margin-top: -120px;
 
   @media screen and (max-width: 900px) {
     background: linear-gradient(

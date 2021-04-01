@@ -15,7 +15,11 @@ const Hero = () => {
             <HeroH1>
               Simply the <strong>best</strong> recipes.
             </HeroH1>
-            <HeroButton primary="true" big="true" round="true" to="/recipes">
+            <HeroButton
+              smooth={true}
+              to="recipes"
+              style={{ padding: "1rem 3rem", fontSize: "24px" }}
+            >
               Read More
             </HeroButton>
           </HeroItems>

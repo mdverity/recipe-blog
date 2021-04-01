@@ -32,7 +32,11 @@ const Header = () => {
         ))}
       </NavMenu>
       <NavBtn>
-        <Button primary="true" round="true" to="/">
+        <Button
+          smooth={true}
+          to="contact"
+          
+        >
           Contact Us
         </Button>
       </NavBtn>

@@ -40,7 +40,7 @@ const Recipe = props => {
       [BLOCKS.HEADING_4]: (node, children) => <h4>{children}</h4>,
       [BLOCKS.HEADING_5]: (node, children) => <h5>{children}</h5>,
       [BLOCKS.HEADING_6]: (node, children) => <h6>{children}</h6>,
-      [BLOCKS.HR]: (node, children) => <hr />,
+      [BLOCKS.HR]: () => <hr />,
       [BLOCKS.QUOTE]: (node, children) => <blockquote>{children}</blockquote>,
       [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
       [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
@@ -94,7 +94,7 @@ export default Recipe
 const Wrapper = styled.div`
   max-width: 1200px;
   width: 100%;
-  margin: 5rem auto;
+  margin: 6rem auto;
   /* align-items: center; */
 `
 
@@ -104,6 +104,8 @@ const Title = styled.h1`
 
 const PostBody = styled.div`
   display: grid;
+  gap: 10px;
+  padding: 0 5rem;
 
   img {
     place-self: center;

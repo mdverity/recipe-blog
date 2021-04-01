@@ -1,19 +1,48 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { Button } from "./Button"
 import EmailBackground from "../assets/images/board-herbs.jpg"
 
 const EmailForm = () => {
+  const [email, setEmail] = useState("")
+
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
+  const handleChange = e => {
+    setValue(e.target.value)
+  }
+
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", email }),
+    })
+      .then(() => alert("Thank you! We've added you to our newsletter."))
+      .catch(error => alert(error))
+
+    e.preventDefault()
+  }
+
   return (
     <>
-      <EmailContainer>
+      <EmailContainer id="contact">
         <EmailContent>
           <h1>Don't miss out on anything!</h1>
           <p>Subscribe to our newsletter for regular updates.</p>
           <form action="#">
-            <FormWrap>
+            <FormWrap onSubmit={handleSubmit}>
               <label htmlFor="email">
-                <input type="email" placeholder="Enter Your Email" id="email" />
+                <input
+                  type="email"
+                  value={email}
+                  requiredplaceholder="Enter Your Email"
+                  id="email"
+                />
               </label>
               <Button
                 as="button"
@@ -62,6 +91,7 @@ const EmailContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 5px solid #101110;
   border-bottom: 5px solid #101110;
 `
 
@@ -90,7 +120,7 @@ const EmailContent = styled.div`
   }
 `
 
-const FormWrap = styled.div`
+const FormWrap = styled.form`
   input {
     padding: 1rem 1.5rem;
     outline: none;

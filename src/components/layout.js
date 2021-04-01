@@ -1,6 +1,7 @@
 import * as React from "react"
-import Footer from "./Footer"
 import Header from "./Header"
+import EmailForm from "../components/EmailForm"
+import Footer from "./Footer"
 import { GlobalStyle } from "./styles/GlobalStyles"
 
 const PageLayout = ({ children }) => {
@@ -9,6 +10,7 @@ const PageLayout = ({ children }) => {
       <GlobalStyle />
       <Header />
       <main>{children}</main>
+      <EmailForm />
       <Footer />
     </>
   )

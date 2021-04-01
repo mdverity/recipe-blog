@@ -4,7 +4,7 @@ import AboutBackground from "../assets/images/board-herbs.jpg"
 
 const AboutUs = () => {
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <TextWrapper>
         <h1>Hi there!</h1>
         <h2 style={{ fontWeight: "300" }}>
@@ -58,8 +58,10 @@ const AboutContainer = styled.div`
   width: 100%;
   height: fit-content;
   padding: 5rem calc((100vw - 1300px) / 2);
+  padding-top: 10rem;
   color: #fefae6;
   border-bottom: 5px solid #101110;
+  margin-top: -120px;
 `
 const TextWrapper = styled.div`
   margin: 2rem;

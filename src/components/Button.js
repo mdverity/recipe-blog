@@ -1,11 +1,11 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link } from "react-scroll"
 
 export const Button = styled(Link)`
-  background: ${({ primary }) => (primary ? "#B26231" : "#FE8E3C")};
-  padding: ${({ big }) => (big ? "1rem 3rem" : ".5rem 1.5rem")};
-  border-radius: ${({ round }) => (round ? "20px" : "none")};
-  font-size: ${({ big }) => (big ? "24px" : "16px")};
+  background: #b26231;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 16px;
   transition: 0.3s !important;
   text-decoration: none;
   white-space: nowrap;
