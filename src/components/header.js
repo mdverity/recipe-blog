@@ -32,11 +32,7 @@ const Header = () => {
         ))}
       </NavMenu>
       <NavBtn>
-        <Button
-          smooth={true}
-          to="contact"
-          
-        >
+        <Button smooth={true} to="contact">
           Contact Us
         </Button>
       </NavBtn>
@@ -51,8 +47,9 @@ const Nav = styled.nav`
   height: 120px;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1300px) / 2);
+  /* padding: 0.5rem calc((100vw - 1300px) / 2); */
   z-index: 99;
+  max-width: 100vw;
   position: sticky;
   top: 0;
   background: linear-gradient(
@@ -94,7 +91,7 @@ const Bars = styled(FaBars)`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 75%);
+    transform: translate(-200%, 150%);
     font-size: 1.8rem;
     cursor: pointer;
   }
@@ -102,7 +99,7 @@ const Bars = styled(FaBars)`
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  margin-right: -50px;
+  /* margin-right: -50px; */
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.75), 0px 4px 10px rgba(0, 0, 0, 0.5);
 
   @media screen and (max-width: 768px) {

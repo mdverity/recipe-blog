@@ -1,14 +1,14 @@
 import React from "react"
 import Hero from "../components/Hero"
 import PageLayout from "../components/layout"
-import RecipeShowcaseThree from "../components/RecipeShowcaseThree"
+import RecipeShowcase from "../components/RecipeShowcase"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <PageLayout>
     <Hero />
     <SEO title="Home" />
-    <RecipeShowcaseThree />
+    <RecipeShowcase />
   </PageLayout>
 )
 

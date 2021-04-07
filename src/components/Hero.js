@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Button } from "./Button"
 import bgVideo from "../assets/videos/serve-food.mp4"
+import { FaArrowAltCircleDown } from "react-icons/fa"
 
 const Hero = () => {
   return (
@@ -15,12 +16,18 @@ const Hero = () => {
             <HeroH1>
               Simply the <strong>best</strong> recipes.
             </HeroH1>
-            <HeroButton
-              smooth={true}
-              to="recipes"
-              style={{ padding: "1rem 3rem", fontSize: "24px" }}
-            >
-              Read More
+            <HeroButton smooth={true} to="recipes">
+              <h4
+                style={{
+                  fontWeight: "400",
+                  fontSize: "24px",
+                  margin: "0",
+                  padding: "10px 20px",
+                }}
+              >
+                Read More
+              </h4>
+              <FaArrowAltCircleDown size="24px" />
             </HeroButton>
           </HeroItems>
         </HeroContent>
@@ -36,7 +43,7 @@ const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
   padding: 0 1rem;
   position: relative;
   margin-top: -120px;

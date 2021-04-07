@@ -12,13 +12,13 @@ export const Button = styled(Link)`
   min-width: 100px;
   cursor: pointer;
   outline: none;
-  border: none;
+  border: rgba(120, 50, 0, 0.5) 2px solid;
   color: #fff;
 
   &:hover {
     /* background: ${({ primary }) => (primary ? "#FE8E3C" : "#9d4117")}; */
     /* color: #402e32; */
-    transform: translateY(-2px);
+    transform: scale(1.05);
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.75);
     filter: brightness(125%);
   }

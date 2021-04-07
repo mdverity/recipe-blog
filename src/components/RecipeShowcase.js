@@ -86,48 +86,6 @@ const RecipeShowcase = () => {
           <div className="gradient-overlay"></div>
           <div className="color-overlay"></div>
         </div>
-
-        // <div className="card">
-        //   <div className="thumbnail">
-        //     <Link to={linkPath}>
-        //
-        //     </Link>
-        //   </div>
-        //   <div className="right">
-        //     <ul className="card-icon-list">
-        //       <li className="card-icon" key={keys.heart}>
-        //         <FaHeart />
-        //       </li>
-        //       <li className="card-icon" key={keys.enve}>
-        //         <FaEnvelope />
-        //       </li>
-        //       <li className="card-icon" key={keys.share}>
-        //         <FaShareAlt />
-        //       </li>
-        //     </ul>
-        //     <h1 className="recipe-title">{item.node.title}</h1>
-        //     <div className="tags">
-        //       <h2 className="recipe-tags">
-        //         {item.node["descriptors"]?.join(" - ")}
-        //       </h2>
-        //     </div>
-        //     <div className="separator"></div>
-        //     <p className="recipe-text">
-        //       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-        //       repudiandae, quas, consequatur doloremque excepturi ipsam, dicta
-        //       obcaecati doloribus tempore sequi laborum sed eum unde magni
-        //       itaque ipsa deserunt! Nam, necessitatibus.
-        //     </p>
-        //   </div>
-        //   <h5 className="post-day">{postDay}</h5>
-        //   <h6 className="post-month">{postMonth}</h6>
-        //   <div className="fab">
-        //     <p className="fab-text">Read More</p>
-        //     <Link to={linkPath}>
-        //       <GiClick className="fab-icon" />
-        //     </Link>
-        //   </div>
-        // </div>
       )
     })
 
