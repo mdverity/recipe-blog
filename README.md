@@ -36,7 +36,7 @@
     # Or start the site from here
     ```
 
-1.  **Open the source code and start editing!**
+3.  **Open the source code and start editing!**
 
     Start up your development server with NPM.
     
