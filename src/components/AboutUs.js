@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import AboutBackground from "../assets/images/board-herbs.jpg"
+import AboutBackground from "../assets/images/board-large.jpg"
 
 const AboutUs = () => {
   return (

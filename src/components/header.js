@@ -1,10 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { FaBars } from "react-icons/fa"
 import { Button } from "./Button"
+import Sidebar from "./Sidebar"
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen)
+  }
+
   const menuData = [
     {
       title: "Home",
@@ -23,7 +30,7 @@ const Header = () => {
   return (
     <Nav>
       <LogoLink to="/">FOOD!</LogoLink>
-      <Bars />
+      <Bars onClick={toggleOpen} />
       <NavMenu>
         {menuData.map((menuItem, index) => (
           <NavLink to={menuItem.path} key={index}>
@@ -36,6 +43,7 @@ const Header = () => {
           Contact Us
         </Button>
       </NavBtn>
+      <Sidebar toggleOpen={toggleOpen} isOpen={isOpen} />
     </Nav>
   )
 }
@@ -44,7 +52,7 @@ export default Header
 
 const Nav = styled.nav`
   background: transparent;
-  height: 120px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   /* padding: 0.5rem calc((100vw - 1300px) / 2); */
@@ -52,11 +60,13 @@ const Nav = styled.nav`
   max-width: 100vw;
   position: sticky;
   top: 0;
+  /* background: rgba(15, 15, 15, 0.95); */
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.35) 50%,
-    rgba(0, 0, 0, 0.75) 90%
+    rgba(15, 15, 15, 0) 0%,
+    rgba(15, 15, 15, 0.1) 5%,
+    rgba(15, 15, 15, 0.85) 10%,
+    rgba(15, 15, 15, 0.95) 90%
   );
 `
 
@@ -91,7 +101,7 @@ const Bars = styled(FaBars)`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-200%, 150%);
+    transform: translate(-150%, 125%);
     font-size: 1.8rem;
     cursor: pointer;
   }

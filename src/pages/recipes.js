@@ -40,7 +40,7 @@ const RecipePage = () => {
         tags: "tags" + index.toString(),
       }
       imageArray.push(
-        <div key={"post" + index} class="blog-card">
+        <div key={"post" + index} className="blog-card">
           <CardBackground
             image={image}
             className="left"

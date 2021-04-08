@@ -16,29 +16,28 @@ const EmailForm = () => {
         <EmailContent>
           <h1>Don't miss out on anything!</h1>
           <p>Subscribe to our newsletter for regular updates.</p>
-          <form action="#">
-            <FormWrap
-              name="contact"
-              method="post"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <input
-                id="email"
-                name="email"
-                type="email"
-                value={email}
-                onChange={handleChange}
-                required
-                placeholder="Enter Your Email"
-              />
-              <Button
-                as="button"
-                type="submit"
-                primary="true"
-                round="true"
-                css={`
+          <FormWrap
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value={email}
+              onChange={handleChange}
+              required
+              placeholder="Enter Your Email"
+            />
+            <Button
+              as="button"
+              type="submit"
+              primary="true"
+              round="true"
+              css={`
                   height: 48px;
 
                   @media screen and (max-width: 768px) {
@@ -51,11 +50,10 @@ const EmailForm = () => {
                       min-width: 250px;
                   }
                 `}
-              >
-                Sign Up
-              </Button>
-            </FormWrap>
-          </form>
+            >
+              Sign Up
+            </Button>
+          </FormWrap>
         </EmailContent>
       </EmailContainer>
     </>
